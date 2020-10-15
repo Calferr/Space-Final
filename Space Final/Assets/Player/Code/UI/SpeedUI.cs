@@ -16,7 +16,7 @@ public class SpeedUI : MonoBehaviour
     {
         if (text != null && Ship.PlayerShip != null)
         {
-            text.text = string.Format("THR: {0}\nSPD: {1}", (Ship.PlayerShip.Throttle * 100.0f).ToString("000"), Ship.PlayerShip.Velocity.magnitude.ToString("000"));
+            text.text = string.Format("THR: {0}%\nSPD: {1}", (Ship.PlayerShip.Throttle * 100.0f).ToString("000"), Ship.PlayerShip.Velocity.magnitude.ToString("000"));
         }
     }
 }
