@@ -9,6 +9,17 @@ public class CameraChanger : MonoBehaviour
     public GameObject Player;
     public GameObject HUD;
 
+    [Header("Planet Colliders")]
+    public GameObject MercuryCollider;
+    public GameObject VenusCollider;
+    public GameObject EarthCollider;
+    public GameObject MarsCollider;
+    public GameObject JupiterCollider;
+    public GameObject SaturnCollider;
+    public GameObject UranusCollider;
+    public GameObject NeptuneCollider;
+    public GameObject PlutoCollider;
+       
     [Header("Cameras")]
     public GameObject MainCamera;
     public GameObject MercuryCamera;
@@ -26,7 +37,6 @@ public class CameraChanger : MonoBehaviour
     {
         MainCamera.SetActive(true);
     }
-
     void OnTriggerEnter(Collider other)
     {
         if (other.tag == "MercuryCam")
@@ -36,6 +46,7 @@ public class CameraChanger : MonoBehaviour
             Player.SetActive(false);
             HUD.SetActive(false);
             Cursor.visible = true;
+            Destroy(MercuryCollider);
         }
         else if(other.tag == "VenusCam")
         {
@@ -44,6 +55,7 @@ public class CameraChanger : MonoBehaviour
             Player.SetActive(false);
             HUD.SetActive(false);
             Cursor.visible = true;
+            Destroy(VenusCollider);
         }
         else if (other.tag == "EarthCam")
         {
@@ -52,6 +64,7 @@ public class CameraChanger : MonoBehaviour
             Player.SetActive(false);
             HUD.SetActive(false);
             Cursor.visible = true;
+            Destroy(EarthCollider);
         }
         else if (other.tag == "MarsCam")
         {
@@ -60,6 +73,7 @@ public class CameraChanger : MonoBehaviour
             Player.SetActive(false);
             HUD.SetActive(false);
             Cursor.visible = true;
+            Destroy(MarsCollider);
         }
         else if (other.tag == "JupiterCam")
         {
@@ -68,6 +82,7 @@ public class CameraChanger : MonoBehaviour
             Player.SetActive(false);
             HUD.SetActive(false);
             Cursor.visible = true;
+            Destroy(JupiterCollider);
         }
         else if (other.tag == "SaturnCam")
         {
@@ -76,6 +91,7 @@ public class CameraChanger : MonoBehaviour
             Player.SetActive(false);
             HUD.SetActive(false);
             Cursor.visible = true;
+            Destroy(SaturnCollider);
         }
         else if (other.tag == "UranusCam")
         {
@@ -84,6 +100,7 @@ public class CameraChanger : MonoBehaviour
             Player.SetActive(false);
             HUD.SetActive(false);
             Cursor.visible = true;
+            Destroy(UranusCollider);
         }
         else if (other.tag == "NeptuneCam")
         {
@@ -92,6 +109,7 @@ public class CameraChanger : MonoBehaviour
             Player.SetActive(false);
             HUD.SetActive(false);
             Cursor.visible = true;
+            Destroy(NeptuneCollider);
         }
         else if (other.tag == "PlutoCam")
         {
@@ -100,6 +118,7 @@ public class CameraChanger : MonoBehaviour
             Player.SetActive(false);
             HUD.SetActive(false);
             Cursor.visible = true;
+            Destroy(PlutoCollider);
         }
     }
 }
